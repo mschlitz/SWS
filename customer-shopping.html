@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>SWS - Customer Shopping</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+	
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/pageInit.js"></script>
+</head>
+
+<body>
+
+<!-- begin: wrapper -->
+<div id="wrapper" class="customer-shopping"><!-- this class defines the page heights (page specific) defined in stylesheet -->
+
+<!-- ------------------------------------------------------------------------------- -->
+<!-- HEADER (Top bar & Nav)                                                          -->
+<!-- ------------------------------------------------------------------------------- -->
+<div id="header-wrap">
+	<div id="header">
+		<div class="top-row">
+			<div class="login-links"><a href="#">SUPPLIER LOGIN</a>|<a href="#">CUSTOMER LOGIN</a></div>
+			<div class="contact-links"><div class="contact-chat"><a href="#">LIVE CHAT</a></div><div class="contact-call">(800) CALL-SWS</div><div class="contact-email"><a href="#">EMAIL</a></div></div>
+			<div class="social-links"><a class="social-rss" href="#"></a><a class="social-linkedin" href="#"></a><a class="social-facebook" href="#"></a><a class="social-twitter" href="#"></a></div>
+		</div>
+		<div class="top-search"><input type="text" /><a href="#"></a></div>
+		<div class="logo"><a href="#"><img src="images/logo.png" /></a></div>
+		<nav>
+			<ul>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">NEWS</a></li>
+				<li><a href="#">SERVICES</a></li>
+				<li><a href="#">RESPONSIBILITY</a></li>
+				<li><a href="#">LOCATIONS</a></li>
+			</ul>
+		</nav>
+		
+		<ul class="shop-menu">
+			<li><a href="#">B2B Home</a></li>
+			<li>
+				<a class="sublink" href="#">Browse Portfolio</a>
+				<ul class="submenu">
+					<li><a href="#">Wine</a></li>
+					<li><a href="#">Spirits</a></li>
+					<li><a href="#">Beer</a></li>
+					<li><a href="#">Non Alcoholics</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Special Offers</a></li>
+			<li><a href="#">Best Sellers</a></li>
+			<li><a href="#">New Items</a></li>
+			<li><a href="#">Pay Bills</a></li>
+			<li><a href="#">Templates</a></li>
+			<li><a href="#">Order History</a></li>
+			<li><a href="#">Education</a></li>
+			<li>
+				<a class="sublink" href="#">Business Tools</a>
+				<ul class="submenu">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+				</ul>
+			</li>
+			<li><a href="#">DWS</a></li>
+		</ul>
+		
+		<div class="breadcrumbs">
+			<ul>
+				<li><a class="home" href="#"></a></li>
+				<li class="divider first-divider"></li>
+				<li><a href="#">Search</a></li>
+				<li class="divider"></li>
+				<li>
+					<a class="sublink" href="#">By Brands</a>
+					<ul class="submenu">
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+					</ul>
+				</li>
+				<li class="divider"></li>
+				<li><a href="#">Wine</a></li>
+				<li class="divider"></li>
+				<li>
+					<a class="sublink" href="#">By Country</a>
+					<ul class="submenu">
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="sublink" href="#">Region</a>
+					<ul class="submenu">
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="sublink" href="#">Sub-Region</a>
+					<ul class="submenu">
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="sublink" href="#">Appelation</a>
+					<ul class="submenu">
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="sublink" href="#">Vineyard</a>
+					<ul class="submenu">
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="sublink" href="#">Varietal</a>
+					<ul class="submenu">
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="breadcrumb-add"><a href="#">Add</a></div>
+		</div>
+		
+		<div class="shop-filter-wrap">
+			<div class="filter-select">
+				Price Filter
+				<select name="filter-drop">
+					<option value="1" selected="selected">Filter by Low to High</option>
+					<option value="2">Option 2</option>
+				</select>	
+			</div>
+			<div class="filter-check"><input type="checkbox" name="show-discounts" value="show-discounts" /> Show Discounts</div>
+			<div class="filter-check"><input type="checkbox" name="show-closeouts" value="show-closeouts" /> Show Closeouts</div>
+			<div class="bar-bg"><div class="bar"></div></div><!-- progress bar -->
+			<div class="bar-text bar-text-first">$1</div><div class="bar-text">$10</div><div class="bar-text">$25</div><div class="bar-text">$50</div><div class="bar-text">$100</div><div class="bar-text">$125</div><div class="bar-text">$150+</div>
+		</div>
+		
+		<div class="mini-cart">
+			<div class="mini-cart-top">
+				<div class="mini-cart-title">Shopping Cart Total</div><div class="mini-cart-user">John's Bar</div>
+			</div>
+			<div class="mini-cart-bottom">
+				<div class="mini-cart-total">$3,278.97</div><div class="mini-cart-checkout"><a href="#">Check Out</a></div>
+			</div>
+		</div>
+		
+		<div class="shop-grid-select">View as: <a href="#"><img src="images/icon_grid1.png" /></a><a href="#"><img src="images/icon_grid2.png" /></a><a href="#"><img src="images/icon_grid3.png" /></a></div>
+		
+	</div>
+</div>
+
+<!-- ------------------------------------------------------------------------------- -->
+<!-- TOP (Main Page)                                                                 -->
+<!-- ------------------------------------------------------------------------------- -->
+<div id="top-wrap">
+	<div id="top">
+	
+		<div class="shop-library-wrap">
+			<div class="shop-library-item">
+				<div class="shop-library-banner-none"></div>
+				<div class="shop-library-img"><img src="images/bottle1.png" /></div>
+				<div class="shop-library-sale"></div>
+				<div class="shop-library-title"><a href="#">Alice White Chardonnay</a></div>
+				<div class="shop-library-desc">Aromas of a fruity mellow grape and the finish of a chocolate velvet cake.</div>
+				<div class="shop-library-size">Size: 750 ML/ BPC: 12 - <span class="shop-library-size-num">21357</span></div>
+				<div class="shop-library-details">
+					<div class="shop-library-row-left">Supplier</div><div class="shop-library-row-right">Conestellation</div>
+					<div class="shop-library-row-left">Brand</div><div class="shop-library-row-right">Alice White</div>
+					<div class="shop-library-row-left">Producer</div><div class="shop-library-row-right">Alice White</div>
+					<div class="shop-library-row-left">Category</div><div class="shop-library-row-right">WINE</div>
+					<div class="shop-library-row-left">Class/Type</div><div class="shop-library-row-right">AROMATIZED</div>
+					<div class="shop-library-row-left">Sub-Type</div><div class="shop-library-row-right">N/A</div>
+					<div class="shop-library-row-left">Color</div><div class="shop-library-row-right">White</div>
+					<div class="shop-library-row-left">Material</div><div class="shop-library-row-right">Grape</div>
+					<div class="shop-library-row-left">Varietietal</div><div class="shop-library-row-right">CHARDONNAY</div>
+					<div class="shop-library-row-left">Country</div><div class="shop-library-row-right">Australia</div>
+					<div class="shop-library-row-left">Region</div><div class="shop-library-row-right">South Eastern Australia</div>
+					<div class="shop-library-row-left">Closure</div><div class="shop-library-row-right">Cork</div>
+				</div>
+				<div class="shop-library-price"><span class="shop-library-price-orig"></span>Now: $43.99</div>
+				<div class="shop-library-buy"><a href="#">BUY</a></div>
+			</div>
+			<div class="shop-library-item">
+				<div class="shop-library-banner-none"></div>
+				<div class="shop-library-img"><img src="images/bottle2.png" /></div>
+				<div class="shop-library-sale"><img src="images/sale_10.png" /></div>
+				<div class="shop-library-title"><a href="#">Alice White Chardonnay 6/4PK</a></div>
+				<div class="shop-library-desc">Aromas of a fruity mellow grape and the finish of a chocolate velvet cake.</div>
+				<div class="shop-library-size">Size: Size: 187 ML/ BPC: 6/4PK - <span class="shop-library-size-num">23129</span></div>
+				<div class="shop-library-details">
+					<div class="shop-library-row-left">Supplier</div><div class="shop-library-row-right">Conestellation</div>
+					<div class="shop-library-row-left">Brand</div><div class="shop-library-row-right">Alice White</div>
+					<div class="shop-library-row-left">Producer</div><div class="shop-library-row-right">Alice White</div>
+					<div class="shop-library-row-left">Category</div><div class="shop-library-row-right">WINE</div>
+					<div class="shop-library-row-left">Class/Type</div><div class="shop-library-row-right">AROMATIZED</div>
+					<div class="shop-library-row-left">Proprietary</div><div class="shop-library-row-right">Lil' Joeys</div>
+					<div class="shop-library-row-left">Color</div><div class="shop-library-row-right">White</div>
+					<div class="shop-library-row-left">Material</div><div class="shop-library-row-right">Grape</div>
+					<div class="shop-library-row-left">Varietietal</div><div class="shop-library-row-right">CHARDONNAY</div>
+					<div class="shop-library-row-left">Country</div><div class="shop-library-row-right">Australia</div>
+					<div class="shop-library-row-left">Region</div><div class="shop-library-row-right">South Eastern Australia</div>
+					<div class="shop-library-row-left">Closure</div>
+					<div class="shop-library-row-right">Screw Cap</div>
+				</div>
+				<div class="shop-library-price"><span class="shop-library-price-orig">Original: $23.99</span>Now: $37.99</div>
+				<div class="shop-library-buy"><a href="#">BUY</a></div>
+			</div>
+			<div class="shop-library-item">
+				<div class="shop-library-banner-none"></div>
+				<div class="shop-library-img"><img src="images/bottle3.png" /></div>
+				<div class="shop-library-title"><a href="#">A by Acacia Chardonnay, '06</a></div>
+				<div class="shop-library-desc">Aromas of a fruity mellow grape and the finish of a chocolate velvet cake.</div>
+				<div class="shop-library-size">Size: 375 ML/ BPC: 12 - <span class="shop-library-size-num">21357</span></div>
+				<div class="shop-library-details">
+					<div class="shop-library-row-left">Supplier</div>
+					<div class="shop-library-row-right">Diageo Chateau &amp; Estates</div>
+					<div class="shop-library-row-left">Brand</div><div class="shop-library-row-right">A by Acacia</div>
+					<div class="shop-library-row-left">Producer</div><div class="shop-library-row-right">Acacia</div>
+					<div class="shop-library-row-left">Category</div><div class="shop-library-row-right">WINE</div>
+					<div class="shop-library-row-left">Class/Type</div>
+					<div class="shop-library-row-right">Still</div>
+					<div class="shop-library-row-left">Sub-Type</div>
+					<div class="shop-library-row-right">N/A Green: Biodynamic</div>
+					<div class="shop-library-row-left">Color</div><div class="shop-library-row-right">White</div>
+					<div class="shop-library-row-left">Material</div><div class="shop-library-row-right">Grape</div>
+					<div class="shop-library-row-left">Varietietal</div><div class="shop-library-row-right">CHARDONNAY</div>
+					<div class="shop-library-row-left">Country</div>
+					<div class="shop-library-row-right">United States</div>
+					<div class="shop-library-row-left">Region</div>
+					<div class="shop-library-row-right">California</div>
+					<div class="shop-library-row-left">Closure</div>
+					<div class="shop-library-row-right">Screw Cap</div>
+				</div>
+				<div class="shop-library-price"><span class="shop-library-price-orig">Original: $23.99</span>Now: $24.99</div>
+				<div class="shop-library-buy"><a href="#">BUY</a></div>
+			</div>
+			<div class="shop-library-item">
+				<div class="shop-library-banner">SPECIAL PASSOVER FEATURE</div>
+				<div class="shop-library-img"><img src="images/bottle4.png" /></div>
+				<div class="shop-library-title"><a href="#">Manischewitz Cherry</a></div>
+				<div class="shop-library-desc">Aromas of a fruity mellow grape and the finish of a chocolate velvet cake.</div>
+				<div class="shop-library-size">Size: 1.5 L/ BPC: 6 - <span class="shop-library-size-num">15363</span></div>
+				<div class="shop-library-details">
+					<div class="shop-library-row-left">Supplier</div><div class="shop-library-row-right">Conestellation</div>
+					<div class="shop-library-row-left">Brand</div><div class="shop-library-row-right">Manischewitz Wines</div>
+					<div class="shop-library-row-left">Producer</div>
+					<div class="shop-library-row-right">Manischewitz</div>
+					<div class="shop-library-row-left">Category</div><div class="shop-library-row-right">WINE</div>
+					<div class="shop-library-row-left">Class/Type</div>
+	        		<div class="shop-library-row-right">Still</div>
+					<div class="shop-library-row-left">Sub-Type</div>
+	        		<div class="shop-library-row-right">N/A Green: Biodynamic</div>
+					<div class="shop-library-row-left">Color</div>
+			    	<div class="shop-library-row-right">Red</div>
+					<div class="shop-library-row-left">Material</div>
+					<div class="shop-library-row-right">Grape Flavor: Cherry</div>
+					<div class="shop-library-row-left">Varietietal</div><div class="shop-library-row-right">Concord</div>
+					<div class="shop-library-row-left">Country</div>
+	        		<div class="shop-library-row-right">United States</div>
+					<div class="shop-library-row-left">Region</div>
+	        		<div class="shop-library-row-right">New York</div>
+					<div class="shop-library-row-left">Closure</div>
+				  <div class="shop-library-row-right">Screw Cap</div>
+				</div>
+				<div class="shop-library-price"><span class="shop-library-price-orig">Original: $23.99</span>Now: $78.65</div>
+				<div class="shop-library-buy"><a href="#">BUY</a></div>
+			</div>
+			<div class="shop-library-item">
+				<div class="shop-library-banner-none"></div>
+				<div class="shop-library-img"><img src="images/bottle5.png" /></div>
+				<div class="shop-library-title"><a href="#">Annie's Lane Shiraz, '02</a></div>
+				<div class="shop-library-desc">Aromas of a fruity mellow grape and the finish of a chocolate velvet cake.</div>
+				<div class="shop-library-size">Size: 750 ML/ BPC: 12 - <span class="shop-library-size-num">41030</span></div>
+				<div class="shop-library-details">
+					<div class="shop-library-row-left">Supplier</div><div class="shop-library-row-right">Treasury Wine Estates Americas</div>
+					<div class="shop-library-row-left">Brand</div><div class="shop-library-row-right">Annie's Lane</div>
+					<div class="shop-library-row-left">Producer</div><div class="shop-library-row-right">Annies's Lane</div>
+					<div class="shop-library-row-left">Category</div><div class="shop-library-row-right">WINE</div>
+					<div class="shop-library-row-left">Class/Type</div><div class="shop-library-row-right">AROMATIZED</div>
+					<div class="shop-library-row-left">Sub-Type</div><div class="shop-library-row-right">N/A</div>
+					<div class="shop-library-row-left">Color</div><div class="shop-library-row-right">White</div>
+					<div class="shop-library-row-left">Material</div><div class="shop-library-row-right">Grape</div>
+					<div class="shop-library-row-left">Varietietal</div><div class="shop-library-row-right">Shiraz</div>
+					<div class="shop-library-row-left">Country</div><div class="shop-library-row-right">Australia</div>
+					<div class="shop-library-row-left">Region</div><div class="shop-library-row-right">South Australia</div>
+					<div class="shop-library-row-left">Closure</div><div class="shop-library-row-right">Cork</div>
+				</div>
+				<div class="shop-library-price"><span class="shop-library-price-orig">Original: $23.99</span>Now: $43.99</div>
+				<div class="shop-library-buy"><a href="#">BUY</a></div>
+			</div>
+			<div class="shop-library-item">
+				<div class="shop-library-banner-none"></div>
+				<div class="shop-library-img"><img src="images/bottle6.png" /></div>
+				<div class="shop-library-title"><a href="#">Turnbull Cabernet Sauvignon '00</a></div>
+				<div class="shop-library-desc">Aromas of a fruity mellow grape and the finish of a chocolate velvet cake.</div>
+				<div class="shop-library-size">Size: 375 ML/ BPC: 12 - <span class="shop-library-size-num">8789</span></div>
+				<div class="shop-library-details">
+					<div class="shop-library-row-left">Supplier</div><div class="shop-library-row-right">Turnbull Wine Cellars</div>
+					<div class="shop-library-row-left">Brand</div><div class="shop-library-row-right">Johnson Turnbull</div>
+					<div class="shop-library-row-left">Producer</div><div class="shop-library-row-right">Turnbull Wine Cellars</div>
+					<div class="shop-library-row-left">Category</div><div class="shop-library-row-right">WINE</div>
+					<div class="shop-library-row-left">Class/Type</div><div class="shop-library-row-right">Still</div>
+					<div class="shop-library-row-left">Color</div>
+			    	<div class="shop-library-row-right">Red</div>
+					<div class="shop-library-row-left">Material</div><div class="shop-library-row-right">Grape</div>
+					<div class="shop-library-row-left">Varietietal</div><div class="shop-library-row-right">Cabernet Sauvignon</div>
+					<div class="shop-library-row-left">Country</div><div class="shop-library-row-right">United States</div>
+					<div class="shop-library-row-left">Region</div>
+				  	<div class="shop-library-row-right">California</div>
+                  	<div class="shop-library-row-left">S-Region</div>
+                  	<div class="shop-library-row-right">Napa V / Napa C (Appellation)</div>
+					<div class="shop-library-row-left">Closure</div><div class="shop-library-row-right">Cork</div>
+				</div>
+				<div class="shop-library-price"><span class="shop-library-price-orig">Original: $23.99</span>Now: $43.99</div>
+				<div class="shop-library-buy"><a href="#">BUY</a></div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		
+		<div class="pagination">
+			<ul>
+				<li><a href="#"><div class="previous"></div></a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">...</a></li>
+				<li><a href="#">14</a></li>
+				<li><a href="#"><div class="next"></div></a></li>
+			</ul>
+		</div>
+		
+	</div>
+</div>
+
+
+<!-- ------------------------------------------------------------------------------- -->
+<!-- MIDDLE (Blue Strip)                                                             -->
+<!-- ------------------------------------------------------------------------------- -->
+<div id="mid-wrap">
+	<div id="mid">
+		<div class="channels">
+			<div class="channel-box">
+				<div class="channel-contact-big"><a href="#">CONTACT</a></div>
+				<div class="channel-contact"><a href="#">Call (800) CALL-SWS</a></div>
+				<div class="channel-contact"><a href="#">Chat with Customer Service</a></div>
+				<div class="channel-contact"><a href="#">Email Your Sales Rep</a></div>
+			</div>
+			<div class="channel-box">
+				<div class="channel-title">BUSINESS TOOLS</div>
+				<div class="channel-desc-short">
+					Profit Calculator<br />Shelf Talker Maker
+				</div>
+				<div class="channel-button-short"><a href="#">USE IT</a></div>
+			</div>
+			<div class="channel-box">
+				<div class="channel-title">LIQUID TRENDS</div>
+				<div class="channel-button-short"><a href="#">GET IT</a></div>
+			</div>
+			<div class="channel-box">
+				<div class="channel-title">PRICE BOOK</div>
+				<div class="channel-button-short"><a href="#">VIEW</a></div>
+			</div>
+		</div>
+		
+		<!-- these are the 1px borders between channel boxes -->
+		<div class="channel-dividers">
+			<div class="channel-divider channel-divider-none"></div><div class="channel-divider"></div><div class="channel-divider"></div><div class="channel-divider channel-divider-last"></div>
+		</div>
+		<div class="channel-bgs">
+			<div class="channel-bg"></div><div class="channel-bg channel-bg5"></div><div class="channel-bg channel-bg6"></div><div class="channel-bg channel-bg7"></div>
+		</div>
+		
+	</div>
+</div>
+
+
+<!-- ------------------------------------------------------------------------------- -->
+<!-- FOOTER                                                                          -->
+<!-- ------------------------------------------------------------------------------- -->
+<div id="footer-wrap">
+	<footer>
+		<div class="footer-col">
+			<div class="footer-col-title">About</div>
+			<div class="footer-col-body">
+				<div class="footer-col-link"><a href="#">Leaders</a></div>
+				<div class="footer-col-link"><a href="#">Harvey Chaplin</a></div>
+				<div class="footer-col-link"><a href="#">Wayne Chaplin</a></div>
+				<div class="footer-col-link"><a href="#">Mel Dick</a></div>
+				<div class="footer-col-link"><a href="#">Brad Vassar</a></div>
+				<div class="footer-col-link"><a href="#">Kevin Fennessey</a></div>
+			</div>
+		</div>
+		<div class="footer-col-wide footer-col-divider">
+			<div class="footer-col-title">Locations</div>
+			<div class="footer-col-body">
+				<div class="footer-col-link-header">States</div>
+				<div class="footer-col-link"><a href="#">Arizona</a></div>
+				<div class="footer-col-link"><a href="#">California</a></div>
+				<div class="footer-col-link"><a href="#">Colorado</a></div>
+				<div class="footer-col-link"><a href="#">DC</a></div>
+				<div class="footer-col-link"><a href="#">Delaware</a></div>
+				<div class="footer-col-link"><a href="#">Florida</a></div>
+				<div class="footer-col-link"><a href="#">Hawaii</a></div>
+				<div class="footer-col-link"><a href="#">Illinois</a></div>
+				<div class="footer-col-link"><a href="#">Indiana</a></div>
+				<div class="footer-col-link"><a href="#">Iowa</a></div>
+				<div class="footer-col-link"><a href="#">Kentucky</a></div>
+				<div class="footer-col-link"><a href="#">Maryland</a></div>
+				<div class="footer-col-link"><a href="#">Michigan</a></div>
+				<div class="footer-col-link"><a href="#">Minnesota</a></div>
+				<div class="footer-col-link"><a href="#">Nevada</a></div>
+				<div class="footer-col-link"><a href="#">New Mexico</a></div>
+				<div class="footer-col-link"><a href="#">New York</a></div>
+				<div class="footer-col-link"><a href="#">Ohio</a></div>
+				<div class="footer-col-link"><a href="#">Pennsylvania</a></div>
+				<div class="footer-col-link"><a href="#">South Carolina</a></div>
+				<div class="footer-col-link-header-spacer">States</div>
+				<div class="footer-col-link"><a href="#">Leaders</a></div>
+				<div class="footer-col-link"><a href="#">Leaders</a></div>
+				<div class="footer-col-link"><a href="#">Leaders</a></div>
+			</div>
+		</div>
+		<div class="footer-col-wide">
+			<div class="footer-col-title"></div>
+			<div class="footer-col-body">
+				<div class="footer-col-link-header">Mid-Atlantic</div>
+				<div class="footer-col-link"><a href="#">North Carolina</a></div>
+				<div class="footer-col-link"><a href="#">Virginia</a></div>
+				<div class="footer-col-link"><a href="#">West Virigina</a></div>
+				<div class="footer-col-link-header-spacer">Gulf Coast</div>
+				<div class="footer-col-link"><a href="#">Mississippi</a></div>
+				<div class="footer-col-link"><a href="#">Alabama</a></div>
+				<div class="footer-col-link"><a href="#">Leaders</a></div>
+				<div class="footer-col-link-header-spacer">SWS West</div>
+				<div class="footer-col-link"><a href="#">Home</a></div>
+				<div class="footer-col-link"><a href="#">Alaska</a></div>
+				<div class="footer-col-link"><a href="#">Idaho</a></div>
+				<div class="footer-col-link"><a href="#">Montana</a></div>
+				<div class="footer-col-link"><a href="#">Oregon</a></div>
+				<div class="footer-col-link"><a href="#">Washington</a></div>
+				<div class="footer-col-link"><a href="#">Wyoming</a></div>
+				<div class="footer-col-link"><a href="#">Utah</a></div>
+				<div class="footer-col-link-header-spacer">DWS Locations</div>
+				<div class="footer-col-link"><a href="#">California</a></div>
+				<div class="footer-col-link"><a href="#">Nevada</a></div>
+				<div class="footer-col-link"><a href="#">Florida</a></div>
+			</div>
+		</div>
+		<div class="footer-col-wide">
+			<div class="footer-col-title">Site Map</div>
+			<div class="footer-col-body">
+				<div class="footer-col-link-header">Customers</div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link-header-spacer">Suppliers</div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link-header-spacer">Supply Chain Management</div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+			</div>
+		</div>
+		<div class="footer-col-wide">
+			<div class="footer-col-title"></div>
+			<div class="footer-col-body">
+				<div class="footer-col-link-header">Employees</div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link-header-spacer">Vendor Relations</div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link-header-spacer">Responsibility</div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+			</div>
+		</div>
+		<div class="footer-col-wide footer-col-divider">
+			<div class="footer-col-title">Additional Links</div>
+			<div class="footer-col-body">
+				<div class="footer-col-link-header">Follow Us</div>
+				<div class="footer-col-link"><a href="#">Facebook</a></div>
+				<div class="footer-col-link"><a href="#">LinkedIn</a></div>
+				<div class="footer-col-link"><a href="#">Twitter</a></div>
+				<div class="footer-col-link-header-spacer">Other</div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div>
+				<div class="footer-col-link"><a href="#">Link</a></div
+			</div>
+		</div>
+		<div class="footer-end"><div class="footer-contact"><a href="#">Contact Webmaster</a></div><div class="footer-copy">Copyright &copy; 2012 Southern Wine & Spirits. All rights reserved. </div>
+	</footer>
+</div>
+
+</div>
+<!-- end: wrapper -->
+
+</body>
+</html>
